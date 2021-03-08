@@ -7,7 +7,19 @@ const {
   deleteCourse,
 } = require("../controllers/coursesController");
 
-router.route("/").get(getCourses).post(addCourse);
+const Course = require("../models/Course");
+const advancedResults = require("../middleware/advancedResults");
+
+router
+  .route("/")
+  .get(
+    advancedResults(Course, {
+      path: "bootcamp",
+      select: "name description",
+    }),
+    getCourses
+  )
+  .post(addCourse);
 // router.route("/bootcamps/:bootcampId/courses").get(getCourses); // this use if you dont want to use merge
 router
   .route("/:id")

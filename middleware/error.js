@@ -23,7 +23,7 @@ const errorhandler = (err, req, res, next) => {
     // Mongoos Validator Errors
     if (err.name === "ValidationError") {
         const message = Object.values(err.errors).map((val) => val.message);
-        console.log(message);
+        // console.log(message);
         error = new ErrorResponse(message, 400);
     }
 

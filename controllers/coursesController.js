@@ -9,6 +9,7 @@ const asyncHandler = require("../middleware/async");
 // @access  Public
 exports.getCourses = asyncHandler(async (req, res, next) => {
   if (req.params.bootcampId) {
+    // * Here if you want to find courses for specific id .
     const courses = await Courses.find({ bootcamp: req.params.bootcampId });
 
     res.status(200).json({

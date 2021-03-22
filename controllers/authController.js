@@ -14,11 +14,7 @@ exports.register = asyncHandler(async (req, res, next) => {
         password,
         role,
     });
-
-    // Create token (which came from the methods in User Model)
-    const token = user.getSignWebToken();
-
-    res.status(200).json({ success: true, token });
+    sendTokenReponse(user, 200, res);
 });
 
 // @desc    Login User
@@ -50,8 +46,39 @@ exports.login = asyncHandler(async (req, res, next) => {
         return next(new ErrorResponse("Invalid Cardentials", 401));
     }
 
+    sendTokenReponse(user, 200, res);
+});
+
+// helper function for the
+const sendTokenReponse = (user, statusCode, res) => {
     // Create token (which came from the methods in User Model)
     const token = user.getSignWebToken();
 
-    res.status(200).json({ success: true, token });
+    const options = {
+        experis: new Date(
+            Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000
+        ),
+        httpOnly: true,
+    };
+
+    // set the secure flag to be to true if on production
+    if (process.env.NODE_ENV === "production") {
+        options.secure = true;
+    }
+
+    res.status(statusCode)
+        .cookie("token", token, options)
+        .json({ success: true, token });
+};
+
+// @desc    Get Current Logged User
+// @route   Get api/v1/auth/me
+// @access  Private
+exports.getMe = asyncHandler(async (req, res, next) => {
+    const user = await User.findById(req.user.id);
+
+    res.status(200).json({
+        success: true,
+        data: user,
+    });
 });

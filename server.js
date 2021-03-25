@@ -17,6 +17,7 @@ connectDB();
 const bootcampRoute = require("./routes/bootcampRouter");
 const coursesRouter = require("./routes/coursesRouter");
 const auth = require("./routes/authRouter");
+const users = require("./routes/userRouter");
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use("/api/v1/bootcamps", bootcampRoute);
 app.use("/api/v1/bootcamps/:bootcampId/courses", coursesRouter);
 app.use("/api/v1/courses", coursesRouter);
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/users", users);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;

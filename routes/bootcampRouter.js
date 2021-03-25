@@ -12,11 +12,10 @@ const {
 
 const Bootcamp = require("../models/Bootcamp");
 
-const advancedResults = require("../middleware/advancedResults");
-
 // include other routers here
 const courses = require("./coursesRouter");
 
+const advancedResults = require("../middleware/advancedResults");
 // authentication middleware
 const { protect, authorize } = require("../middleware/auth");
 

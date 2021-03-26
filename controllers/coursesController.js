@@ -91,7 +91,7 @@ exports.updateCourse = asyncHandler(async (req, res, next) => {
     //   if not course
     if (!course) {
         return next(
-            ErrorResponse(`there is no course with id ${req.params.id}`)
+            new ErrorResponse(`there is no course with id ${req.params.id}`)
         );
     }
 

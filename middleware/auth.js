@@ -12,13 +12,14 @@ exports.protect = asyncHandler(async (req, res, next) => {
         req.headers.authorization &&
         req.headers.authorization.startsWith("Bearer")
     ) {
+        // Set Token From Bearer token in the header
         token = req.headers.authorization.split(" ")[1];
+    } else if (req.cookies.token) {
+        // Set Token From Cookie
+        // ! For Token inside cookies
+        console.log("in the second descision");
+        token = req.cookies.token;
     }
-
-    // ! For Token inside cookies
-    // else if (req.cookies.token) {
-    //     token = req.cookies.token;
-    // }
 
     if (!token) {
         return next(

@@ -4,4 +4,4 @@
 
 
 # or you can go to the docs i made by docgen from the link below:
-[API docs using postman and docgen](https://raw.githubusercontent.com/Abduallah-Mohamed/Devcamper-Bootcamp/master/public/index.html)
+[API docs using postman and docgen](https://raw.githubusercontent.com/Abduallah-Mohamed/Devcamper-Bootcamp/master/index.html)

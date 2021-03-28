@@ -1,0 +1,59 @@
+[33mcommit 7d85014381cfa79f4d91b7890def35cdc4286394[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Sat Mar 27 01:05:48 2021 +0200
+
+    Add security for our API
+
+[33mcommit 6141dadcb4ced428efa4f6eaac48d4c9247791b4[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Thu Mar 25 11:26:38 2021 +0200
+
+    Add password reset functionality and all CRUD users functionality for admin
+
+[33mcommit 669c0abf725c1d1bda998f958babb71e337867c1[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Tue Mar 23 09:52:28 2021 +0200
+
+    Added the ownership functionality
+
+[33mcommit 2b15872a85cc9870cd597a472b08403a99e67aa5[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Tue Mar 23 00:10:18 2021 +0200
+
+    Add Protect and Authorized middlewares
+
+[33mcommit 770758bff2086df712ddc113c5f023a132f18924[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Sun Mar 21 23:58:37 2021 +0200
+
+    Added Registeration and Login Functionality
+
+[33mcommit 652db8bee611c2ea1d219df9409c20709942461d[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Mon Mar 8 09:24:23 2021 +0200
+
+    functionality to uplaod a photo, advanced results middleware to add for any resource i want
+
+[33mcommit 61d3ec070f640a1d0afbaf10bfe83ed31efb8ac2[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Mon Mar 1 00:41:07 2021 +0200
+
+    add some functionality for Courses
+
+[33mcommit 123549f84abd1bf3ef2af67b13e563812e85c63f[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Sat Feb 27 00:52:05 2021 +0200
+
+    seeder file for all our resourses. filter, sort and selectfunctionality
+
+[33mcommit 34f4437703f7e32dbcd9feface66ca924fbd0312[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Thu Feb 25 00:07:59 2021 +0200
+
+    initial commit
+
+[33mcommit d63fb5da7c3ad7d41665c3e7d29b060fb1808904[m
+Author: Abduallah-Mohamed <Abduallahmohamed966@gmail.com>
+Date:   Thu Feb 11 10:20:55 2021 +0200
+
+    initial express setup
